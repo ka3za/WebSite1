@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Example Doc</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <style>
+        /*Dette er et Internal Style Sheet. Overrider External Style Sheet.*/
+        .content { /*content er defineret som en class. Så den kan identifisere mere end ét element.*/
+            float: left;
+            text-align: left;
+            height: auto;
+            width: 1800px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            background-color: blue;
+        }
+
+        section {
+            float: left;
+            text-align: left;
+        }
+
+        #header { /*header er defineret som en id. Så den kan kun identifiseres med ét element.*/
+            float: left;
+            width: 15%;
+            height: auto;
+            background-color: #00ffff;
+            margin-bottom: 10px;
+            clear:right;
+        }
+
+        footer {
+            text-align: center;
+            float: left;
+            margin-left: 0%;
+            width: 5%;
+            height: auto;
+            clear: both; /*Alting er i en container. Clear specifisere om der ikke skal være andre containere ved siderne af denne.
+                            float skal specifiseres på de containere du vil medvirke!*/
+            background-color: fuchsia;
+            border: 5px solid;
+            border-color:coral;
+        }
+
+        aside {
+            text-align: right;
+            float: right;
+            column-count: 3;
+            column-gap: 30px;
+            column-rule: 1px solid black;
+            column-width: 500px;
+            background-color: lightgray;
+            font-style: italic;
+            clear: both;
+            width: 650px
+        }
+
+        p {
+            border-color: inherit; /*Den arver border-color fra den container <p> er inde i.*/
+        }
+
+        body {
+            background-color: burlywood;
+        }
+
+        /*Link specifisering.*/
+        a:link {color:red;}
+        a:visited {color:green;}
+        a:hover {color:blue;}
+        a:active {color:yellow;}
+
+        li {
+            list-style-type:circle;
+        }
+
+        .myBox {
+            width:auto;
+            padding: 5px;
+            border: 7px dotted red;
+            margin:5px;
+            outline:double blue;
+        }
+
+        div.div1 {
+            position:relative; /*relativ til hvor den ville have været automatisk*/
+            bottom:0px;
+            right:120px;
+            background-color:red;
+        }
+        div.div2 {
+            position:fixed; /*fixed til én position. Så hvorend specifiseret med forhold til browser vinduet*/
+            top:25px;
+            right:25px;
+            background-color:yellow;
+        }
+        div.div3 {
+            position:absolute; /*absolute er lignende fixed, men relativ til den's parent container*/
+            bottom:25px;
+            left:25px;
+            background-color:blue;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <header id="header">
+        <hgroup>
+            <h1 style="background-color:yellow;">Hello World!</h1>
+            <h2 style="color: red;">Or what?</h2><!--Dette er Inline Style. Brug sparesomt, hvis overhovedet. Overrider Internal Style Sheet.-->
+        </hgroup>
+        <nav>
+            <ul>
+                <li>link 1</li>
+                <li>link 2</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+
+        <h3>Can you save farewell?</h3>
+
+        <article>
+            <p>
+                By saying goodbye, you accept the leaving of another!
+                <br />
+                But the action of acceptance, is giving concent.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="myBox">
+        <h3>WTF?</h3>
+
+        <article>
+            <figure>
+                <figcaption>Madness...</figcaption>
+                <img src="Img/W64M2xM.gif" alt="Madness..." />
+            </figure>
+            <h3>NO!</h3>
+            <ul>
+                <li>All this is nonsence. Don´t listen to it.</li>
+                <li>It´s rotting your brain!</li>
+                <li><mark>Get Out!!!</mark></li>
+            </ul>
+        </article>
+
+    </section>
+
+
+    <aside>
+        By viewing this page you resign all your claims to your soul to Max Gonaria Corp. Established 1765 bce. <br />
+        If you resist the soulsucking of Max Gonaria Corp for a duration of 6 milliseconds or more than my the great Gthekudgha have mercy on your liver.
+    </aside>
+
+    <div class="div1">
+        BLABLALBLALBALDFLABOFJDGGOAwkjeoefkjK
+    </div>
+    <div class="div2">
+        BLABLALBLALBALDFLABOFJDGGOAwkjeoefkjK
+    </div>
+    <div class="div3">
+        BLABLALBLALBALDFLABOFJDGGOAwkjeoefkjK
+    </div>
+
+    <footer>
+        <p>Copyright ME!</p>
+        <time pubdate="pubdate" datetime="April 12, 2018"></time>
+    </footer>
+
+</body>
+</html>

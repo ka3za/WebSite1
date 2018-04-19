@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dom Properties</title>
+</head>
+<body>
+
+    <div id="sunset" class="sunset2" style="width: 500px; height: 50px; color: #3ef">
+        Sunset! Sunrise! Any time in between!
+    </div>
+
+    <br />
+
+    <div id="sunrise" style="float:left;"><img src="Img/l0XpyTT.jpg.gif" width="200" height="150" /></div>
+
+    <div id="sunsets"><img src="Img/Maned Wolf.jpg" width="200" height="150" /></div>
+
+    <script>
+        document.bgColor = "tomato";
+        document.getElementById("sunset").style.backgroundColor = "red";
+        document.getElementById("sunset").style.width = "700px";
+
+        var sunrisePic = document.getElementById("sunrise");
+        var sunsetPic = document.getElementById("sunsets");
+
+        sunrisePic.addEventListener("click", function () { alert("sunrise") });
+        sunsetPic.addEventListener("click", function () { alert("sunsets") }); 
+
+
+        var contains = document.getElementById("sunset").innerHTML;
+        var object = document.getElementById("sunset").nodeName;
+        var color = document.getElementById("sunset").style.color;
+        var element = document.getElementById("sunset").nodeType;
+
+        document.writeln("Contains: " + contains + "<br />");
+        document.writeln("HTML object: " + object + "<br />");
+        document.writeln("Color: " + color + "<br />");
+        document.writeln("Width: " + document.getElementById("sunset").style.width + " Height: " + document.getElementById("sunset").style.height + "<br />");
+        document.writeln("Element type: " + element + "<br />");
+    </script>
+
+</body>
+</html>

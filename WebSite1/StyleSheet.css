@@ -1,0 +1,10 @@
+﻿/*Dette er et External Style Sheet*/
+h1 {
+    background-color: green;
+    color:rebeccapurple;
+}
+p {
+    border: thick dashed;
+    border-color: gold;
+    padding: 5px;
+}
